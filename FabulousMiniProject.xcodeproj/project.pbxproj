@@ -14,6 +14,9 @@
 		1C24D9441C52B27200A25241 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C24D9421C52B27200A25241 /* LaunchScreen.storyboard */; };
 		1C24D94F1C52B27200A25241 /* FabulousMiniProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C24D94E1C52B27200A25241 /* FabulousMiniProjectTests.swift */; };
 		1C24D95A1C52B27200A25241 /* FabulousMiniProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C24D9591C52B27200A25241 /* FabulousMiniProjectUITests.swift */; };
+		1C24D9681C52C26200A25241 /* HomeTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C24D9671C52C26200A25241 /* HomeTab.swift */; };
+		1C24D96E1C52C6C900A25241 /* Ritual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C24D96D1C52C6C900A25241 /* Ritual.swift */; };
+		1C24D9701C52C6E700A25241 /* RitualTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C24D96F1C52C6E700A25241 /* RitualTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		1C24D9551C52B27200A25241 /* FabulousMiniProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FabulousMiniProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C24D9591C52B27200A25241 /* FabulousMiniProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabulousMiniProjectUITests.swift; sourceTree = "<group>"; };
 		1C24D95B1C52B27200A25241 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C24D9671C52C26200A25241 /* HomeTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTab.swift; sourceTree = "<group>"; };
+		1C24D96D1C52C6C900A25241 /* Ritual.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ritual.swift; sourceTree = "<group>"; };
+		1C24D96F1C52C6E700A25241 /* RitualTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RitualTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +106,12 @@
 				1C24D9391C52B27200A25241 /* AppDelegate.swift */,
 				1C24D93B1C52B27200A25241 /* ViewController.swift */,
 				1C24D93D1C52B27200A25241 /* Main.storyboard */,
+				1C24D9671C52C26200A25241 /* HomeTab.swift */,
 				1C24D9401C52B27200A25241 /* Assets.xcassets */,
 				1C24D9421C52B27200A25241 /* LaunchScreen.storyboard */,
 				1C24D9451C52B27200A25241 /* Info.plist */,
+				1C24D96D1C52C6C900A25241 /* Ritual.swift */,
+				1C24D96F1C52C6E700A25241 /* RitualTableViewCell.swift */,
 			);
 			path = FabulousMiniProject;
 			sourceTree = "<group>";
@@ -259,6 +268,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C24D9701C52C6E700A25241 /* RitualTableViewCell.swift in Sources */,
+				1C24D96E1C52C6C900A25241 /* Ritual.swift in Sources */,
+				1C24D9681C52C26200A25241 /* HomeTab.swift in Sources */,
 				1C24D93C1C52B27200A25241 /* ViewController.swift in Sources */,
 				1C24D93A1C52B27200A25241 /* AppDelegate.swift in Sources */,
 			);
@@ -485,6 +497,7 @@
 				1C24D9601C52B27200A25241 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1C24D9611C52B27200A25241 /* Build configuration list for PBXNativeTarget "FabulousMiniProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +506,7 @@
 				1C24D9631C52B27200A25241 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1C24D9641C52B27200A25241 /* Build configuration list for PBXNativeTarget "FabulousMiniProjectUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +515,7 @@
 				1C24D9661C52B27200A25241 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -5,6 +5,22 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1C24D9351C52B27200A25241"
+               BuildableName = "FabulousMiniProject.app"
+               BlueprintName = "FabulousMiniProject"
+               ReferencedContainer = "container:FabulousMiniProject.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -12,7 +28,36 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1C24D9491C52B27200A25241"
+               BuildableName = "FabulousMiniProjectTests.xctest"
+               BlueprintName = "FabulousMiniProjectTests"
+               ReferencedContainer = "container:FabulousMiniProject.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1C24D9541C52B27200A25241"
+               BuildableName = "FabulousMiniProjectUITests.xctest"
+               BlueprintName = "FabulousMiniProjectUITests"
+               ReferencedContainer = "container:FabulousMiniProject.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "1C24D9351C52B27200A25241"
+            BuildableName = "FabulousMiniProject.app"
+            BlueprintName = "FabulousMiniProject"
+            ReferencedContainer = "container:FabulousMiniProject.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -26,6 +71,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "1C24D9351C52B27200A25241"
+            BuildableName = "FabulousMiniProject.app"
+            BlueprintName = "FabulousMiniProject"
+            ReferencedContainer = "container:FabulousMiniProject.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -35,6 +90,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "1C24D9351C52B27200A25241"
+            BuildableName = "FabulousMiniProject.app"
+            BlueprintName = "FabulousMiniProject"
+            ReferencedContainer = "container:FabulousMiniProject.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
