@@ -11,6 +11,7 @@ class Ritual {
     var timeOfDay = "morning"
     var startTime = 0
     var tasks = [String]()
+    var expanded = false
     
     //used for spacer table view cells
     init(startTime: Int){

@@ -16,7 +16,6 @@ class HomeTab: UIViewController, UITableViewDelegate {
     
     @IBOutlet weak var ritualsTable: UITableView!
     
-    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return rituals.count
     }
@@ -36,6 +35,10 @@ class HomeTab: UIViewController, UITableViewDelegate {
             spacerCell.timeLabel.text = ritual.toString()
             spacerCell.center.x.advancedBy(-25.0)
             return spacerCell
+        }
+        //ritual has been selected to be expanded
+        if(ritual.expanded){
+            
         }
         let ritualCell = tableView.dequeueReusableCellWithIdentifier("RitualCell", forIndexPath: indexPath) as! RitualTableViewCell
         ritualCell.ritualTitle.text = ritual.timeOfDay

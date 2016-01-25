@@ -13,11 +13,19 @@ class RitualTableViewCell: UITableViewCell{
     @IBOutlet weak var ritualTitle: UILabel!
     
     @IBAction func expand(sender: AnyObject) {
+        print("Expand")
     }
     
     @IBOutlet weak var numberOfHabits: UILabel!
     
     @IBAction func showHabits(sender: AnyObject) {
+        print("Show Habits")
+        let senderButton: UIButton = sender as! UIButton
+        let buttonCell: UITableViewCell = senderButton.superview?.superview as! UITableViewCell
+        let tableView: UITableView = buttonCell.superview as! UITableView
+        let cellPath = tableView.indexPathForCell(buttonCell)
+        let cellRow = cellPath?.row
+        print(cellRow)
     }
     
     override func awakeFromNib() {
