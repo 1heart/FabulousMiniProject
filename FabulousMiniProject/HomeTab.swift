@@ -8,12 +8,14 @@
 
 import UIKit
 
+//variable used to store "spacers" and rituals, see Ritual class
+var rituals = [Ritual(startTime: 830),Ritual(timeOfDay: "Morning", startTime: 830, tasks: ["Write To-Do","Today is a great day!","East a Great Breakfast","Feed Emma","Exercise", "Party!"]), Ritual(startTime: 1430),Ritual(timeOfDay: "Afternoon", startTime: 1430, tasks: ["Exercise some more","Learn Xcode"])]
+
+
 class HomeTab: UIViewController, UITableViewDelegate {
     
     @IBOutlet weak var ritualsTable: UITableView!
     
-    //variable used to store "spacers" and rituals, see Ritual class
-    var rituals = [Ritual(startTime: 830),Ritual(timeOfDay: "Morning", startTime: 830, tasks: ["Write To-Do","Today is a great day!","East a Great Breakfast","Feed Emma","Exercise", "Party!"]), Ritual(startTime: 1430),Ritual(timeOfDay: "Afternoon", startTime: 1430, tasks: ["Exercise some more","Learn Xcode"])]
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return rituals.count
