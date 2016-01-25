@@ -16,13 +16,15 @@ class AddRitual: UIViewController {
     
     @IBOutlet weak var habits: UITextField!
     
+    //this is very messy, will be cleaned up later
     @IBAction func submitButton(sender: AnyObject) {
         
         let habitsToAdd: [String] = (habits.text?.componentsSeparatedByString(","))!
-        
         rituals.append(Ritual(startTime: Int(time.text!)!))
         rituals.append(Ritual(timeOfDay: ritualTitle.text!, startTime: Int(time.text!)!, tasks: habitsToAdd))
     }
+    
+    //make statusbarbackground global to avoid repitition
     override func viewDidLoad() {
         super.viewDidLoad()
         let statusBarBackground: UIView = UIView.init(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.size.width, 20))
@@ -32,6 +34,11 @@ class AddRitual: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    //make global statusbar lightcontent to avoid repition in classes
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
     }
     
     
