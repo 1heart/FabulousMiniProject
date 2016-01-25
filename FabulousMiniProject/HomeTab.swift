@@ -12,28 +12,50 @@ class HomeTab: UIViewController, UITableViewDelegate {
     
     @IBOutlet weak var ritualsTable: UITableView!
     
-    var rituals = [Ritual(timeOfDay: "Morning", startTime: 830, tasks: ["Write To-Do","Today is a great day!","East a Great Breakfast","Feed Emma","Exercise", "Party!"]), Ritual(timeOfDay: "Afternoon", startTime: 1430, tasks: ["Exercise some more","Learn Xcode"])]
+    //variable used to store "spacers" and rituals, see Ritual class
+    var rituals = [Ritual(startTime: 830),Ritual(timeOfDay: "Morning", startTime: 830, tasks: ["Write To-Do","Today is a great day!","East a Great Breakfast","Feed Emma","Exercise", "Party!"]), Ritual(startTime: 1430),Ritual(timeOfDay: "Afternoon", startTime: 1430, tasks: ["Exercise some more","Learn Xcode"])]
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return rituals.count
     }
     
+    //function used to set different heights for the different tableview cells
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if(indexPath.row%2==0){
+            return 50.0
+        }
+        return 150.0
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let ritual = rituals[indexPath.row]
-        let cell = tableView.dequeueReusableCellWithIdentifier("RitualCell", forIndexPath: indexPath) as! RitualTableViewCell
-        cell.ritualTitle.text = ritual.timeOfDay
-        cell.numberOfHabits.text = String(ritual.tasks.count)+" habits"
-        cell.layer.cornerRadius = 10.0
-        cell.layer.masksToBounds = true
-        cell.layer.borderWidth = 0.0
-        cell.layer.shadowOffset = CGSizeMake(0.0, -2.0)
-        cell.layer.shadowRadius = 2.0
-        return cell
+        if(indexPath.row%2==0){
+            let spacerCell = tableView.dequeueReusableCellWithIdentifier("SpacerCell", forIndexPath: indexPath) as! SpacerTableViewCell
+            spacerCell.timeLabel.text = ritual.toString()
+            spacerCell.center.x.advancedBy(-25.0)
+            return spacerCell
+        }
+        let ritualCell = tableView.dequeueReusableCellWithIdentifier("RitualCell", forIndexPath: indexPath) as! RitualTableViewCell
+        ritualCell.ritualTitle.text = ritual.timeOfDay
+        ritualCell.numberOfHabits.text = String(ritual.tasks.count)+" habits"
+        ritualCell.layer.cornerRadius = 15.0
+        ritualCell.layer.masksToBounds = true
+        var shadowFrame: CGRect = ritualCell.layer.bounds;
+        //var shadowPath: CGPathRef = UIBezierPath.bezierPathByReversingPath(shadowFrame.CGPath)
+        //ritualCell.layer.shadowPath = shadowPath;
+        ritualCell.layer.borderWidth = 0.0
+        ritualCell.layer.shadowOffset = CGSizeMake(0.0, -2.0)
+        ritualCell.layer.shadowOpacity = 1.0
+        ritualCell.layer.shadowColor = UIColor.blackColor().CGColor
+        ritualCell.layer.shadowRadius = 5.0
+        return ritualCell
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.init(red: 228.0/255.0, green: 0.0/255.0, blue: 79.0/255.0, alpha: 1.0)
+        let statusBarBackground: UIView = UIView.init(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.size.width, 20))
+        statusBarBackground.backgroundColor = UIColor.init(red: 228.0/255.0, green: 0.0/255.0, blue: 79.0/255.0, alpha: 1.0)
+        self.view.addSubview(statusBarBackground)
     }
     
     override func didReceiveMemoryWarning() {

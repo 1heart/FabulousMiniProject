@@ -17,6 +17,7 @@
 		1C24D9681C52C26200A25241 /* HomeTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C24D9671C52C26200A25241 /* HomeTab.swift */; };
 		1C24D96E1C52C6C900A25241 /* Ritual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C24D96D1C52C6C900A25241 /* Ritual.swift */; };
 		1C24D9701C52C6E700A25241 /* RitualTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C24D96F1C52C6E700A25241 /* RitualTableViewCell.swift */; };
+		1C49D90E1C542734002B254A /* SpacerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C49D90D1C542734002B254A /* SpacerTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		1C24D9671C52C26200A25241 /* HomeTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTab.swift; sourceTree = "<group>"; };
 		1C24D96D1C52C6C900A25241 /* Ritual.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ritual.swift; sourceTree = "<group>"; };
 		1C24D96F1C52C6E700A25241 /* RitualTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RitualTableViewCell.swift; sourceTree = "<group>"; };
+		1C49D90D1C542734002B254A /* SpacerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpacerTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				1C24D9451C52B27200A25241 /* Info.plist */,
 				1C24D96D1C52C6C900A25241 /* Ritual.swift */,
 				1C24D96F1C52C6E700A25241 /* RitualTableViewCell.swift */,
+				1C49D90D1C542734002B254A /* SpacerTableViewCell.swift */,
 			);
 			path = FabulousMiniProject;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				1C24D9681C52C26200A25241 /* HomeTab.swift in Sources */,
 				1C24D93C1C52B27200A25241 /* ViewController.swift in Sources */,
 				1C24D93A1C52B27200A25241 /* AppDelegate.swift in Sources */,
+				1C49D90E1C542734002B254A /* SpacerTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
