@@ -40,14 +40,17 @@ class HomeTab: UIViewController, UITableViewDelegate {
         ritualCell.numberOfHabits.text = String(ritual.tasks.count)+" habits"
         ritualCell.layer.cornerRadius = 15.0
         ritualCell.layer.masksToBounds = true
-        var shadowFrame: CGRect = ritualCell.layer.bounds;
-        //var shadowPath: CGPathRef = UIBezierPath.bezierPathByReversingPath(shadowFrame.CGPath)
-        //ritualCell.layer.shadowPath = shadowPath;
         ritualCell.layer.borderWidth = 0.0
-        ritualCell.layer.shadowOffset = CGSizeMake(0.0, -2.0)
-        ritualCell.layer.shadowOpacity = 1.0
+        ritualCell.layer.shadowOffset = CGSizeMake(1, 1)
+        ritualCell.layer.shadowOpacity = 0.75
         ritualCell.layer.shadowColor = UIColor.blackColor().CGColor
         ritualCell.layer.shadowRadius = 5.0
+        
+        ritualCell.clipsToBounds = false
+        
+        let shadowFrame: CGRect = ritualCell.layer.bounds
+        let shadowPath: CGPathRef = UIBezierPath(rect: shadowFrame).CGPath
+        ritualCell.layer.shadowPath = shadowPath
         return ritualCell
     }
     
