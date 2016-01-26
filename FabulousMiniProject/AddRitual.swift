@@ -22,6 +22,7 @@ class AddRitual: UIViewController {
         let habitsToAdd: [String] = (habits.text?.componentsSeparatedByString(","))!
         rituals.append(Ritual(startTime: Int(time.text!)!))
         rituals.append(Ritual(timeOfDay: ritualTitle.text!, startTime: Int(time.text!)!, tasks: habitsToAdd))
+        //NSUserDefaults.standardUserDefaults().setObject(rituals, forKey: "rituals")
     }
     
     //make statusbarbackground global to avoid repitition

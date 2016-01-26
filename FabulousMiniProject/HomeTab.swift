@@ -30,6 +30,9 @@ class HomeTab: UIViewController, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        if((NSUserDefaults.standardUserDefaults().objectForKey("rituals")) != nil){
+            rituals = NSUserDefaults.standardUserDefaults().objectForKey("rituals") as! [Ritual]
+        }
         let ritual = rituals[indexPath.row]
         if(indexPath.row%2==0){
             let spacerCell = tableView.dequeueReusableCellWithIdentifier("SpacerCell", forIndexPath: indexPath) as! SpacerTableViewCell
@@ -65,7 +68,7 @@ class HomeTab: UIViewController, UITableViewDelegate {
         let statusBarBackground: UIView = UIView.init(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.size.width, 20))
         statusBarBackground.backgroundColor = UIColor.init(red: 228.0/255.0, green: 0.0/255.0, blue: 79.0/255.0, alpha: 1.0)
         self.view.addSubview(statusBarBackground)
-        tableView = ritualsTable
+        //tableView = ritualsTable
     }
     
     override func didReceiveMemoryWarning() {
