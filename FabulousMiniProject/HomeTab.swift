@@ -11,6 +11,7 @@ import UIKit
 //variable used to store "spacers" and rituals, see Ritual class
 var rituals = [Ritual(startTime: 830),Ritual(timeOfDay: "Morning", startTime: 830, tasks: ["Write To-Do","Today is a great day!","East a Great Breakfast","Feed Emma","Exercise", "Party!"]), Ritual(startTime: 1430),Ritual(timeOfDay: "Afternoon", startTime: 1430, tasks: ["Exercise some more","Learn Xcode"])]
 
+var tableView = UITableView!()
 
 class HomeTab: UIViewController, UITableViewDelegate {
     
@@ -64,6 +65,7 @@ class HomeTab: UIViewController, UITableViewDelegate {
         let statusBarBackground: UIView = UIView.init(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.size.width, 20))
         statusBarBackground.backgroundColor = UIColor.init(red: 228.0/255.0, green: 0.0/255.0, blue: 79.0/255.0, alpha: 1.0)
         self.view.addSubview(statusBarBackground)
+        tableView = ritualsTable
     }
     
     override func didReceiveMemoryWarning() {
