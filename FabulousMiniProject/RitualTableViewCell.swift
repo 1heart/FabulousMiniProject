@@ -22,7 +22,7 @@ class RitualTableViewCell: UITableViewCell{
         print("Show Habits")
         let senderButton: UIButton = sender as! UIButton
         let buttonCell: UITableViewCell = senderButton.superview?.superview as! UITableViewCell
-        let tableView: UITableView = buttonCell.superview as! UITableView
+        let tableView: UITableView = buttonCell.superview?.superview as! UITableView
         let cellPath = tableView.indexPathForCell(buttonCell)
         let cellRow = cellPath?.row
         print(cellRow)

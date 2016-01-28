@@ -17,6 +17,10 @@ class HomeTab: UIViewController, UITableViewDelegate {
     
     @IBOutlet weak var ritualsTable: UITableView!
     
+    func returnTable() -> UITableView {
+        return ritualsTable
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return rituals.count
     }
