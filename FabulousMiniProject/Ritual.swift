@@ -25,6 +25,15 @@ class Ritual {
         self.tasks = tasks
     }
     
+    func setToExpanded() -> Bool {
+        expanded = true
+        return expanded
+    }
+    
+    func returnTasks() -> [String] {
+        return tasks
+    }
+    
     func addTask(task: String){
         self.tasks.append(task)
     }

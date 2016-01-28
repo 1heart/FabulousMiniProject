@@ -25,7 +25,8 @@ class RitualTableViewCell: UITableViewCell{
         let tableView: UITableView = buttonCell.superview?.superview as! UITableView
         let cellPath = tableView.indexPathForCell(buttonCell)
         let cellRow = cellPath?.row
-        print(cellRow)
+        print(cellRow!)
+        rituals[cellRow!].setToExpanded()
     }
     
     override func awakeFromNib() {

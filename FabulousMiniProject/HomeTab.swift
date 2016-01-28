@@ -17,10 +17,6 @@ class HomeTab: UIViewController, UITableViewDelegate {
     
     @IBOutlet weak var ritualsTable: UITableView!
     
-    func returnTable() -> UITableView {
-        return ritualsTable
-    }
-    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return rituals.count
     }
@@ -29,6 +25,12 @@ class HomeTab: UIViewController, UITableViewDelegate {
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if(indexPath.row%2==0){
             return 50.0
+        }
+        if(rituals[indexPath.row].expanded){
+            let ritual = rituals[indexPath.row]
+            let tasks: [String] = ritual.returnTasks()
+            let tasksSize: Int = tasks.count
+            return CGFloat(tasksSize)*20.0
         }
         return 150.0
     }
@@ -46,7 +48,7 @@ class HomeTab: UIViewController, UITableViewDelegate {
         }
         //ritual has been selected to be expanded
         if(ritual.expanded){
-            
+            print(indexPath.row," has been expanded")
         }
         let ritualCell = tableView.dequeueReusableCellWithIdentifier("RitualCell", forIndexPath: indexPath) as! RitualTableViewCell
         ritualCell.ritualTitle.text = ritual.timeOfDay
